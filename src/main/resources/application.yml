@@ -1,0 +1,55 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/trip
+    username: root
+    password: Dongcci92!!
+
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://115.85.181.47:3306/trip
+#    username: trip
+#    password: 1234
+
+jpa:
+  properties:
+    hibernate:
+      show_sql: true
+      format_sql: true
+  hibernate:
+    ddl-auto: create-drop
+  database-platform: org.hibernate.dialect.MySQL8Dialect
+
+logging:
+  level:
+    org:
+      springframework:
+        boot: DEBUG
+      hibernate:
+        type:
+          descriptor:
+            sql: trace
+
+#servlet:
+#  multipart:
+#    maxFileSize: 20MB
+#    maxRequestSize: 100MB
+
+#itemImgLocation: /Users/proxy/items/item/
+#uploadPath: file:/Users/proxy/items/
+
+itemImgLocation: /root/items
+uploadPath: /root
+
+jwt:
+  secret-key: GaXmsBiD6L1Z2M3NorAExZp8gr3uPXDR6J6iZxe4pfYKTf0SV1+I0xGqmuPG+nmLVCl9/2+lYB/VFI+AgoFGpg==
+
+oauth:
+  kakao:
+    client-id: 40f9c8e041fd25d24eb46d7ec6d86a88
+    url:
+      auth: https://kauth.kakao.com
+      api: https://kapi.kakao.com
